@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GCContactsTableViewController.h"
 
 @implementation AppDelegate
 
@@ -15,9 +16,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    GCContactsTableViewController *contactsViewController = [[GCContactsTableViewController alloc] init];
+    self.nvc = [[UINavigationController alloc] initWithRootViewController:contactsViewController];
+    self.window.rootViewController = self.nvc;
+    
     [self.window makeKeyAndVisible];
-    return YES;
-}
+    return YES;}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

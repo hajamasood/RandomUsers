@@ -19,6 +19,12 @@
 		A5009CE719783D2E0079788E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5009CCF19783D2E0079788E /* UIKit.framework */; };
 		A5009CEF19783D2E0079788E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5009CED19783D2E0079788E /* InfoPlist.strings */; };
 		A5009CF119783D2E0079788E /* RandomUsersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5009CF019783D2E0079788E /* RandomUsersTests.m */; };
+		A5009D0019783DF70079788E /* GCContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5009CFB19783DF70079788E /* GCContactsTableViewController.m */; };
+		A5009D0119783DF70079788E /* GCContactsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5009CFC19783DF70079788E /* GCContactsTableViewController.xib */; };
+		A5009D0219783DF70079788E /* GCContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5009CFE19783DF70079788E /* GCContactDetailViewController.m */; };
+		A5009D0319783DF70079788E /* GCContactDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5009CFF19783DF70079788E /* GCContactDetailViewController.xib */; };
+		A5009D0519783E0C0079788E /* contact_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A5009D0419783E0C0079788E /* contact_placeholder.png */; };
+		A5009D0819783E2A0079788E /* GCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5009D0719783E2A0079788E /* GCUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,15 @@
 		A5009CEC19783D2E0079788E /* RandomUsersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RandomUsersTests-Info.plist"; sourceTree = "<group>"; };
 		A5009CEE19783D2E0079788E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5009CF019783D2E0079788E /* RandomUsersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomUsersTests.m; sourceTree = "<group>"; };
+		A5009CFA19783DF70079788E /* GCContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCContactsTableViewController.h; sourceTree = "<group>"; };
+		A5009CFB19783DF70079788E /* GCContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCContactsTableViewController.m; sourceTree = "<group>"; };
+		A5009CFC19783DF70079788E /* GCContactsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCContactsTableViewController.xib; sourceTree = "<group>"; };
+		A5009CFD19783DF70079788E /* GCContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCContactDetailViewController.h; sourceTree = "<group>"; };
+		A5009CFE19783DF70079788E /* GCContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCContactDetailViewController.m; sourceTree = "<group>"; };
+		A5009CFF19783DF70079788E /* GCContactDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCContactDetailViewController.xib; sourceTree = "<group>"; };
+		A5009D0419783E0C0079788E /* contact_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_placeholder.png; sourceTree = "<group>"; };
+		A5009D0619783E2A0079788E /* GCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCUser.h; sourceTree = "<group>"; };
+		A5009D0719783E2A0079788E /* GCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +124,15 @@
 			children = (
 				A5009CDA19783D2E0079788E /* AppDelegate.h */,
 				A5009CDB19783D2E0079788E /* AppDelegate.m */,
+				A5009D0619783E2A0079788E /* GCUser.h */,
+				A5009D0719783E2A0079788E /* GCUser.m */,
+				A5009CFA19783DF70079788E /* GCContactsTableViewController.h */,
+				A5009CFB19783DF70079788E /* GCContactsTableViewController.m */,
+				A5009CFC19783DF70079788E /* GCContactsTableViewController.xib */,
+				A5009CFD19783DF70079788E /* GCContactDetailViewController.h */,
+				A5009CFE19783DF70079788E /* GCContactDetailViewController.m */,
+				A5009CFF19783DF70079788E /* GCContactDetailViewController.xib */,
+				A5009D0419783E0C0079788E /* contact_placeholder.png */,
 				A5009CDD19783D2E0079788E /* Images.xcassets */,
 				A5009CD219783D2E0079788E /* Supporting Files */,
 			);
@@ -219,7 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5009D0519783E0C0079788E /* contact_placeholder.png in Resources */,
+				A5009D0119783DF70079788E /* GCContactsTableViewController.xib in Resources */,
 				A5009CD619783D2E0079788E /* InfoPlist.strings in Resources */,
+				A5009D0319783DF70079788E /* GCContactDetailViewController.xib in Resources */,
 				A5009CDE19783D2E0079788E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +268,9 @@
 			files = (
 				A5009CDC19783D2E0079788E /* AppDelegate.m in Sources */,
 				A5009CD819783D2E0079788E /* main.m in Sources */,
+				A5009D0219783DF70079788E /* GCContactDetailViewController.m in Sources */,
+				A5009D0019783DF70079788E /* GCContactsTableViewController.m in Sources */,
+				A5009D0819783E2A0079788E /* GCUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
