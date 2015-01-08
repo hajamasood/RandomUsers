@@ -174,6 +174,15 @@
         GCUser *user = [[GCUser alloc] initWithUser:userDict[@"user"]];
         [_contacts addObject:user];
     }
+    
+    
+    //sort contacts by first name
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
+    NSArray *descriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray = [_contacts sortedArrayUsingDescriptors:descriptors];
+    _contacts = [sortedArray mutableCopy];
+    
+
     NSLog(@"total contacts retrieved : %lu",(unsigned long)_contacts.count);
     
     dispatch_async(dispatch_get_main_queue(), ^{
