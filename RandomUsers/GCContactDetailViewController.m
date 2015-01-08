@@ -55,7 +55,7 @@
 
 - (void)loadContactPhoto
 {
-    NSURL *photoURL = [NSURL URLWithString:_contact.pictureLink];
+    NSURL *photoURL = [NSURL URLWithString:[_contact pictureUrlWithSizeType:SizeTypeMedium]];
 
     __weak GCContactDetailViewController *wSelf = self;
     

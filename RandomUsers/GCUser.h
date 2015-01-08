@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, SizeType) {
+    SizeTypeThumbnail,
+    SizeTypeMedium,
+    SizeTypeLarge
+};
+
 @interface GCUser : NSObject
 
 @property (nonatomic,strong) NSString *firstName;
@@ -19,8 +25,9 @@
 @property (nonatomic,strong) NSString *state;
 @property (nonatomic,strong) NSString *city;
 @property (nonatomic,strong) NSString *zip;
-@property (nonatomic,strong) NSString *pictureLink;
+@property (nonatomic,strong) NSDictionary *pictureLink;
 
 -(id)initWithUser:(NSDictionary *)userDict;
+-(NSString *)pictureUrlWithSizeType:(SizeType)sizeType;
 
 @end

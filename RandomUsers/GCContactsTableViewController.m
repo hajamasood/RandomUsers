@@ -86,7 +86,7 @@
     __weak UITableViewCell *wCell = cell;
     
     // download the image asynchronously
-    [self downloadDataWithURL:[NSURL URLWithString:user.pictureLink] completionBlock:^(BOOL succeeded, NSData *data) {
+    [self downloadDataWithURL:[NSURL URLWithString:[user pictureUrlWithSizeType:SizeTypeThumbnail]] completionBlock:^(BOOL succeeded, NSData *data) {
         if (succeeded) {
             // change the image in the cell
             UIImage *image = [UIImage imageWithData:data];
@@ -161,6 +161,7 @@
     [self downloadDataWithURL:[NSURL URLWithString:RANDOM_20_USERS_API] completionBlock:^(BOOL succeeded, NSData *responseData) {
         NSError *jsonError;
         NSDictionary *jsonResults = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonError];
+        NSLog(@"Response Data : %@", jsonResults);
         [self handleJSON:jsonResults];
         
     }];

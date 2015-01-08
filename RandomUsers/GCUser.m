@@ -29,4 +29,21 @@
     return self;
 }
 
+-(NSString *)pictureUrlWithSizeType:(SizeType)sizeType
+{
+    switch (sizeType) {
+        case SizeTypeThumbnail:
+            return _pictureLink[@"thumbnail"];
+            break;
+        case SizeTypeMedium:
+            return _pictureLink[@"medium"];
+            break;
+        case SizeTypeLarge:
+            return _pictureLink[@"large"];
+            break;
+        default:
+            break;
+    }
+}
+
 @end
