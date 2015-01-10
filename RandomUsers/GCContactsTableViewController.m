@@ -18,6 +18,7 @@
     UIActivityIndicatorView *_spinner;
     
 }
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation GCContactsTableViewController
@@ -42,7 +43,12 @@
     [self.view addSubview:_spinner];
     [_spinner startAnimating];
     
-    [self getRandomUsers];
+    //add refresh control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl addTarget:self action:@selector(getRandomUsers:) forControlEvents:UIControlEventValueChanged];
+    
+    [self getRandomUsers:nil];
 
 }
 
@@ -155,10 +161,13 @@
 
 #pragma mark - Helper Methods
 
--(void)getRandomUsers
+-(void)getRandomUsers:(id)sender
 {
     
     [self downloadDataWithURL:[NSURL URLWithString:RANDOM_20_USERS_API] completionBlock:^(BOOL succeeded, NSData *responseData) {
+        if (sender && [sender isKindOfClass:[UIRefreshControl class]]) {
+            [sender endRefreshing];
+        }
         NSError *jsonError;
         NSDictionary *jsonResults = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonError];
         NSLog(@"Response Data : %@", jsonResults);
